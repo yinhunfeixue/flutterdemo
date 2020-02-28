@@ -28,5 +28,5 @@
             android:value="2" />
     </application>
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
-    
+      <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
