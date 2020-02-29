@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:myapp/widgets/Box.dart';
 
 class StartAd extends StatefulWidget {
   @override
@@ -32,6 +31,7 @@ class StartAdState extends State<StartAd> {
           child: Text(
             '$remainIndex秒（跳过）',
             style: TextStyle(
+                fontWeight: FontWeight.normal,
                 fontSize: 14,
                 color: Colors.black,
                 decoration: TextDecoration.none),

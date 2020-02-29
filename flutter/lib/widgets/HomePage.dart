@@ -6,6 +6,7 @@ import 'package:local_auth/local_auth.dart';
 import 'package:myapp/i10n/localization_intl.dart';
 import 'package:myapp/widgetCreate/WidgetCreater.dart';
 import 'package:myapp/widgets/ChatList.dart';
+import 'package:myapp/widgets/Demo.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  bool islogin = false;
+  bool islogin = true;
   @override
   Widget build(BuildContext context) {
     return DefaultTextStyle(
@@ -74,17 +75,16 @@ class HomePageState extends State<HomePage> {
                   switch (action) {
                     case 'A':
                       setState(() {
-                      //  local = null;
+                        //  local = null;
                       });
                       break;
                     case 'B':
                       setState(() {
-                    //    local = new Locale('zh', 'CH');
+                        //    local = new Locale('zh', 'CH');
                       });
                       break;
                     case 'C':
-                      setState(() {
-                      });
+                      setState(() {});
                       break;
                   }
                 },
@@ -135,6 +135,8 @@ class HomePageState extends State<HomePage> {
               switch (index) {
                 case 0:
                   return new ChatList();
+                case 1:
+                  return Demo();
                 default:
                   return new Container(child: new Text(index.toString()));
               }
