@@ -21,8 +21,8 @@ class StartAdState extends State<StartAd> {
             bottom: 0,
             left: 0,
             right: 0,
-            child: Image.network(
-              'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2914964477,1439608823&fm=26&gp=0.jpg',
+            child: Image.asset(
+              'assets/ad.jpg',
               fit: BoxFit.cover,
             )),
         Positioned(

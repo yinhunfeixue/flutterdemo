@@ -31,7 +31,12 @@ class MyAppState extends State<MyApp> {
           Locale('zh', 'CH'),
           Locale('en', 'US'),
         ],
-        // home: HomePage());
-        home: StartAd());
+        home: DefaultTextStyle(
+          style: TextStyle(
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontSize: 16),
+          child: StartAd(),
+        ));
   }
 }

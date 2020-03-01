@@ -82,7 +82,7 @@ class NumberInputState extends State<NumberInput> {
               flex: 1,
               child: TextField(
                 inputFormatters: [
-                  WhitelistingTextInputFormatter(RegExp('[0-9.]'))
+                  WhitelistingTextInputFormatter(RegExp('[0-9.-]'))
                 ],
                 onEditingComplete: () {
                   this._setStrValue(this._textController.text);
@@ -138,8 +138,14 @@ class NumberInputState extends State<NumberInput> {
   }
 
   void _setValue(double newValue) {
+    double oldValue = this.value;
     this.value = newValue;
     this._adjustValue();
+    if (this.value != oldValue) {
+      if (widget.onChange != null) {
+        widget.onChange(this.value);
+      }
+    }
   }
 
   void _adjustValue() {
